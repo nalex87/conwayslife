@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		D26ACDCA287FA39D00E1EFA8 /* ConwaysLifeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26ACDC9287FA39D00E1EFA8 /* ConwaysLifeApp.swift */; };
-		D26ACDCC287FA39D00E1EFA8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26ACDCB287FA39D00E1EFA8 /* ContentView.swift */; };
+		D26ACDCC287FA39D00E1EFA8 /* ConwaysLifeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26ACDCB287FA39D00E1EFA8 /* ConwaysLifeContentView.swift */; };
 		D26ACDCE287FA39F00E1EFA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D26ACDCD287FA39F00E1EFA8 /* Assets.xcassets */; };
 		D26ACDD1287FA39F00E1EFA8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D26ACDD0287FA39F00E1EFA8 /* Preview Assets.xcassets */; };
 		D26ACDDC287FA3A000E1EFA8 /* ConwaysLifeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26ACDDB287FA3A000E1EFA8 /* ConwaysLifeTests.swift */; };
 		D26ACDE7287FA3A000E1EFA8 /* ConwaysLifeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26ACDE6287FA3A000E1EFA8 /* ConwaysLifeUITests.swift */; };
+		D2C20C93288000CE00FDB8B4 /* seedData.json in Resources */ = {isa = PBXBuildFile; fileRef = D2C20C92288000CE00FDB8B4 /* seedData.json */; };
+		D2C20CA22880BBF600FDB8B4 /* ConwaysCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C20CA12880BBF600FDB8B4 /* ConwaysCell.swift */; };
+		D2C20CA72880BC1A00FDB8B4 /* ConwaysCellStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C20CA62880BC1A00FDB8B4 /* ConwaysCellStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +38,7 @@
 /* Begin PBXFileReference section */
 		D26ACDC6287FA39D00E1EFA8 /* ConwaysLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConwaysLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D26ACDC9287FA39D00E1EFA8 /* ConwaysLifeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConwaysLifeApp.swift; sourceTree = "<group>"; };
-		D26ACDCB287FA39D00E1EFA8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D26ACDCB287FA39D00E1EFA8 /* ConwaysLifeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConwaysLifeContentView.swift; sourceTree = "<group>"; };
 		D26ACDCD287FA39F00E1EFA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D26ACDD0287FA39F00E1EFA8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D26ACDD2287FA39F00E1EFA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,6 +48,9 @@
 		D26ACDE2287FA3A000E1EFA8 /* ConwaysLifeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConwaysLifeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D26ACDE6287FA3A000E1EFA8 /* ConwaysLifeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConwaysLifeUITests.swift; sourceTree = "<group>"; };
 		D26ACDE8287FA3A000E1EFA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2C20C92288000CE00FDB8B4 /* seedData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = seedData.json; sourceTree = "<group>"; };
+		D2C20CA12880BBF600FDB8B4 /* ConwaysCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConwaysCell.swift; path = Models/ConwaysCell.swift; sourceTree = "<group>"; };
+		D2C20CA62880BC1A00FDB8B4 /* ConwaysCellStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ConwaysCellStore.swift; path = Coordinators/ConwaysCellStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +101,11 @@
 		D26ACDC8287FA39D00E1EFA8 /* ConwaysLife */ = {
 			isa = PBXGroup;
 			children = (
+				D2C20C982880BB8B00FDB8B4 /* Coordinators */,
+				D2C20C972880BB8000FDB8B4 /* Models */,
 				D26ACDC9287FA39D00E1EFA8 /* ConwaysLifeApp.swift */,
-				D26ACDCB287FA39D00E1EFA8 /* ContentView.swift */,
+				D26ACDCB287FA39D00E1EFA8 /* ConwaysLifeContentView.swift */,
+				D2C20C92288000CE00FDB8B4 /* seedData.json */,
 				D26ACDCD287FA39F00E1EFA8 /* Assets.xcassets */,
 				D26ACDD2287FA39F00E1EFA8 /* Info.plist */,
 				D26ACDCF287FA39F00E1EFA8 /* Preview Content */,
@@ -128,6 +137,22 @@
 				D26ACDE8287FA3A000E1EFA8 /* Info.plist */,
 			);
 			path = ConwaysLifeUITests;
+			sourceTree = "<group>";
+		};
+		D2C20C972880BB8000FDB8B4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D2C20CA12880BBF600FDB8B4 /* ConwaysCell.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		D2C20C982880BB8B00FDB8B4 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				D2C20CA62880BC1A00FDB8B4 /* ConwaysCellStore.swift */,
+			);
+			name = Coordinators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +258,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2C20C93288000CE00FDB8B4 /* seedData.json in Resources */,
 				D26ACDD1287FA39F00E1EFA8 /* Preview Assets.xcassets in Resources */,
 				D26ACDCE287FA39F00E1EFA8 /* Assets.xcassets in Resources */,
 			);
@@ -259,7 +285,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D26ACDCC287FA39D00E1EFA8 /* ContentView.swift in Sources */,
+				D2C20CA22880BBF600FDB8B4 /* ConwaysCell.swift in Sources */,
+				D26ACDCC287FA39D00E1EFA8 /* ConwaysLifeContentView.swift in Sources */,
+				D2C20CA72880BC1A00FDB8B4 /* ConwaysCellStore.swift in Sources */,
 				D26ACDCA287FA39D00E1EFA8 /* ConwaysLifeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

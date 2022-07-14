@@ -11,7 +11,7 @@ import SwiftUI
 struct ConwaysLifeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ConwaysLifeContentView(cellStore: ConwaysCellStore())
         }
     }
 }

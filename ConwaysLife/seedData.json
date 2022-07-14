@@ -1,0 +1,12 @@
+[
+    ["alive", "alive", "dead", "alive", "dead", "alive", "dead", "alive", "dead", "dead"],
+    ["dead", "alive", "dead", "alive", "dead", "alive", "dead", "alive", "dead", "dead"],
+    ["dead", "alive", "dead", "alive", "dead", "alive", "dead", "alive", "dead", "dead"],
+    ["dead", "alive", "dead", "alive", "dead", "alive", "dead", "dead", "dead", "dead"],
+    ["dead", "alive", "dead", "alive", "dead", "alive", "dead", "alive", "dead", "dead"],
+    ["dead", "alive", "dead", "alive", "dead", "alive", "dead", "alive", "dead", "dead"],
+    ["dead", "alive", "alive", "alive", "dead", "alive", "dead", "alive", "dead", "dead"],
+    ["dead", "alive", "dead", "alive", "dead", "alive", "dead", "alive", "dead", "dead"],
+    ["dead", "alive", "dead", "alive", "dead", "alive", "dead", "alive", "dead", "dead"],
+    ["dead", "alive", "dead", "alive", "dead", "alive", "dead", "alive", "dead", "alive"]
+]
