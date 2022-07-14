@@ -10,24 +10,43 @@ import XCTest
 
 class ConwaysLifeTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testConwaysCellModel() throws {
+        let aliveCell = ConwaysCell(status: .alive)
+        XCTAssert(aliveCell.isAlive, "Incorrect isAlive value")
+        let deadCell = ConwaysCell(status: .dead)
+        XCTAssert(deadCell.isAlive == false, "Incorrect isAlive value")
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    func testConwaysCellStoreInitializer() throws {
+        let cellStore = ConwaysCellStore()
+        XCTAssertEqual(cellStore.cells.count, 10, "Incorrect cells number after init")
+        XCTAssertEqual(cellStore.cells[0].count, 10, "Incorrect cells number after init")
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testConwaysCellStoreJSONProcessor() throws {
+        let cellStore = ConwaysCellStore()
+        let rawSeedData: [[String]] = try cellStore.processJSONData(filename: "seedData.json")
+        let cells = [
+            ["alive", "alive", "dead", "alive", "dead", "alive", "dead", "alive", "dead", "dead"],
+            ["dead", "alive", "dead", "alive", "dead", "alive", "dead", "alive", "dead", "dead"],
+            ["dead", "alive", "dead", "alive", "dead", "alive", "dead", "alive", "dead", "dead"],
+            ["dead", "alive", "dead", "alive", "dead", "alive", "dead", "dead", "dead", "dead"],
+            ["dead", "alive", "dead", "alive", "dead", "alive", "dead", "alive", "dead", "dead"],
+            ["dead", "alive", "dead", "alive", "dead", "alive", "dead", "alive", "dead", "dead"],
+            ["dead", "alive", "alive", "alive", "dead", "alive", "dead", "alive", "dead", "dead"],
+            ["dead", "alive", "dead", "alive", "dead", "alive", "dead", "alive", "dead", "dead"],
+            ["dead", "alive", "dead", "alive", "dead", "alive", "dead", "alive", "dead", "dead"],
+            ["dead", "alive", "dead", "alive", "dead", "alive", "dead", "alive", "dead", "alive"]
+        ]
+        XCTAssertEqual(rawSeedData, cells, "Incorrect processed data")
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func testConwaysCellStoreNextGeneration() throws {
+        let cellStore = ConwaysCellStore()
+        XCTAssertEqual(cellStore.cells[0][0].status, ConwaysCell(status: .alive).status, "Incorrect cell data after init")
+        XCTAssertEqual(cellStore.cells[1][1].status, ConwaysCell(status: .alive).status, "Incorrect cell data after init")
+        cellStore.generateNextGeneration()
+        XCTAssertEqual(cellStore.cells[0][0].status, ConwaysCell(status: .alive).status, "Incorrect cell data on the next generation")
+        XCTAssertEqual(cellStore.cells[1][1].status, ConwaysCell(status: .dead).status, "Incorrect cell data the next generation")
     }
-
 }

@@ -22,6 +22,7 @@ struct ConwaysLifeContentView: View {
                 .frame(width: 120.0, height: 100.0)
             Text("Conway’s Game of Life")
                 .padding(.bottom)
+                .accessibilityIdentifier("ConwaysGameOfLife")
             
             Spacer()
             
@@ -32,6 +33,7 @@ struct ConwaysLifeContentView: View {
                             Image(cell.status.rawValue)
                                 .resizable()
                                 .frame(width: 30, height: 25.0)
+                                .accessibilityIdentifier("CellImage")
                         }
                     }
                     
